@@ -13,7 +13,8 @@ const getSongs = asyncHandler(async (req, res) => {
 // @route   POST /api/goals
 // @access  Public
 const createSong = asyncHandler(async (req, res) => {
-    if(!req.body.title && !req.body.artist && !req.body.album && !req.body.genre) {
+    const {title, artist, album, genre} = req.body
+    if(!title || !artist || !album || !genre) {
         res.status(400)
         throw new Error('Please add all required fields')
     }
