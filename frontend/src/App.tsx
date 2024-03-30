@@ -1,10 +1,13 @@
+import SongList from "./components/SongList";
+import Stats from "./components/Stats";
+import Dashboard from "./pages/Dashboard";
 
-function App() {
+export default function App() {
   return (
     <div>
-      <h1>Songs App</h1>
+      <Dashboard />
     </div>
   );
 }
 
-export default App;
+
